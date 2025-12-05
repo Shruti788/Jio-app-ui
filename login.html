@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyJio - Recharge, Plans & Offers</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <h1><span class="jio-text">Jio</span></h1>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#plans">Plans</a></li>
+                    <li><a href="#5g">5G</a></li>
+                    <li><a href="#offers">Offers</a></li>
+                    <li><a href="#support">Support</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <button class="btn-secondary" id="loginBtn">Login</button>
+                    <button class="btn-primary" id="signupBtn">Sign Up</button>
+                </div>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Welcome to <span class="jio-text">Jio</span></h1>
+                <p class="hero-subtitle">India's Fastest 5G Network</p>
+                <div class="recharge-box">
+                    <h3>Recharge Now</h3>
+                    <form id="rechargeForm">
+                        <input type="tel" placeholder="Enter Mobile Number" id="mobileNumber" maxlength="10" required>
+                        <button type="submit" class="btn-primary">Proceed to Recharge</button>
+                    </form>
+                    <div class="quick-actions">
+                        <button class="quick-btn"><i class="fas fa-file-invoice"></i> Pay Bills</button>
+                        <button class="quick-btn"><i class="fas fa-history"></i> Recharge History</button>
+                        <button class="quick-btn"><i class="fas fa-gift"></i> Special Offers</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5G Speed Animation Section -->
+    <section class="speed-section" id="5g">
+        <div class="container">
+            <h2>Experience <span class="jio-text">True 5G</span> Speed</h2>
+            <div class="speed-animation">
+                <div class="speed-meter">
+                    <canvas id="speedCanvas" width="300" height="300"></canvas>
+                    <div class="speed-text">
+                        <span id="speedValue">0</span>
+                        <span class="speed-unit">Mbps</span>
+                    </div>
+                </div>
+                <div class="speed-features">
+                    <div class="feature-item">
+                        <i class="fas fa-bolt"></i>
+                        <h4>Lightning Fast</h4>
+                        <p>Download speeds up to 1 Gbps</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-signal"></i>
+                        <h4>Low Latency</h4>
+                        <p>Ultra-responsive network</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-network-wired"></i>
+                        <h4>Wide Coverage</h4>
+                        <p>Available in 1000+ cities</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Plans Section -->
+    <section class="plans-section" id="plans">
+        <div class="container">
+            <h2>Choose Your Perfect Plan</h2>
+            <div class="plan-tabs">
+                <button class="tab-btn active" data-tab="prepaid">Prepaid</button>
+                <button class="tab-btn" data-tab="postpaid">Postpaid</button>
+                <button class="tab-btn" data-tab="roaming">International Roaming</button>
+            </div>
+
+            <div class="plan-content">
+                <!-- Prepaid Plans -->
+                <div class="plan-tab-content active" id="prepaid">
+                    <div class="plan-grid">
+                        <div class="plan-card">
+                            <div class="plan-badge">Popular</div>
+                            <h3>₹239</h3>
+                            <p class="validity">28 Days</p>
+                            <ul class="plan-features">
+                                <li><i class="fas fa-check"></i> 1.5GB/Day Data</li>
+                                <li><i class="fas fa-check"></i> Unlimited Calls</li>
+                                <li><i class="fas fa-check"></i> 100 SMS/Day</li>
+                                <li><i class="fas fa-check"></i> Free Jio Apps</li>
+                            </ul>
+                            <button class="btn-primary recharge-btn" data-plan="239">Recharge Now</button>
+                        </div>
+                        <div class="plan-card">
+                            <h3>₹299</h3>
+                            <p class="validity">28 Days</p>
+                            <ul class="plan-features">
+                                <li><i class="fas fa-check"></i> 2GB/Day Data</li>
+                                <li><i class="fas fa-check"></i> Unlimited Calls</li>
+                                <li><i class="fas fa-check"></i> 100 SMS/Day</li>
+                                <li><i class="fas fa-check"></i> Free Jio Apps</li>
+                            </ul>
+                            <button class="btn-primary recharge-btn" data-plan="299">Recharge Now</button>
+                        </div>
+                        <div class="plan-card">
+                            <div class="plan-badge">Best Value</div>
+                            <h3>₹666</h3>
+                            <p class="validity">84 Days</p>
+                            <ul class="plan-features">
+                                <li><i class="fas fa-check"></i> 1.5GB/Day Data</li>
+                                <li><i class="fas fa-check"></i> Unlimited Calls</li>
+                                <li><i class="fas fa-check"></i> 100 SMS/Day</li>
+                                <li><i class="fas fa-check"></i> Free Jio Apps</li>
+                            </ul>
+                            <button class="btn-primary recharge-btn" data-plan="666">Recharge Now</button>
+                        </div>
+                        <div class="plan-card">
+                            <h3>₹2999</h3>
+                            <p class="validity">365 Days</p>
+                            <ul class="plan-features">
+                                <li><i class="fas fa-check"></i> 2.5GB/Day Data</li>
+                                <li><i class="fas fa-check"></i> Unlimited Calls</li>
+                                <li><i class="fas fa-check"></i> 100 SMS/Day</li>
+                                <li><i class="fas fa-check"></i> Free Jio Apps</li>
+                            </ul>
+                            <button class="btn-primary recharge-btn" data-plan="2999">Recharge Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Postpaid Plans -->
+                <div class="plan-tab-content" id="postpaid">
+                    <div class="plan-grid">
+                        <div class="plan-card">
+                            <h3>₹399</h3>
+                            <p class="validity">Monthly</p>
+                            <ul class="plan-features">
+                                <li><i class="fas fa-check"></i> 75GB Data</li>
+                                <li><i class="fas fa-check"></i> Unlimited Calls</li>
+                                <li><i class="fas fa-check"></i> 100 SMS/Day</li>
+                                <li><i class="fas fa-check"></i> 1 Connection</li>
+                            </ul>
+                            <button class="btn-primary recharge-btn" data-plan="399">Subscribe Now</button>
+                        </div>
+                        <div class="plan-card">
+                            <div class="plan-badge">Family Plan</div>
+                            <h3>₹599</h3>
+                            <p class="validity">Monthly</p>
+                            <ul class="plan-features">
+                                <li><i class="fas fa-check"></i> 150GB Data</li>
+                                <li><i class="fas fa-check"></i> Unlimited Calls</li>
+                                <li><i class="fas fa-check"></i> 100 SMS/Day</li>
+                                <li><i class="fas fa-check"></i> 2 Connections</li>
+                            </ul>
+                            <button class="btn-primary recharge-btn" data-plan="599">Subscribe Now</button>
+                        </div>
+                        <div class="plan-card">
+                            <h3>₹999</h3>
+                            <p class="validity">Monthly</p>
+                            <ul class="plan-features">
+                                <li><i class="fas fa-check"></i> 300GB Data</li>
+                                <li><i class="fas fa-check"></i> Unlimited Calls</li>
+                                <li><i class="fas fa-check"></i> 100 SMS/Day</li>
+                                <li><i class="fas fa-check"></i> 3 Connections</li>
+                            </ul>
+                            <button class="btn-primary recharge-btn" data-plan="999">Subscribe Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- International Roaming -->
+                <div class="plan-tab-content" id="roaming">
+                    <div class="plan-grid">
+                        <div class="plan-card">
+                            <h3>₹2875</h3>
+                            <p class="validity">30 Days</p>
+                            <ul class="plan-features">
+                                <li><i class="fas fa-check"></i> USA & Canada</li>
+                                <li><i class="fas fa-check"></i> 5GB Data</li>
+                                <li><i class="fas fa-check"></i> 500 Min Calls</li>
+                                <li><i class="fas fa-check"></i> 100 SMS</li>
+                            </ul>
+                            <button class="btn-primary recharge-btn" data-plan="2875">Activate Now</button>
+                        </div>
+                        <div class="plan-card">
+                            <h3>₹1751</h3>
+                            <p class="validity">7 Days</p>
+                            <ul class="plan-features">
+                                <li><i class="fas fa-check"></i> UAE</li>
+                                <li><i class="fas fa-check"></i> 3GB Data</li>
+                                <li><i class="fas fa-check"></i> 300 Min Calls</li>
+                                <li><i class="fas fa-check"></i> 50 SMS</li>
+                            </ul>
+                            <button class="btn-primary recharge-btn" data-plan="1751">Activate Now</button>
+                        </div>
+                        <div class="plan-card">
+                            <h3>₹5751</h3>
+                            <p class="validity">30 Days</p>
+                            <ul class="plan-features">
+                                <li><i class="fas fa-check"></i> Europe</li>
+                                <li><i class="fas fa-check"></i> 10GB Data</li>
+                                <li><i class="fas fa-check"></i> 1000 Min Calls</li>
+                                <li><i class="fas fa-check"></i> 200 SMS</li>
+                            </ul>
+                            <button class="btn-primary recharge-btn" data-plan="5751">Activate Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SIM Section -->
+    <section class="sim-section">
+        <div class="container">
+            <h2>Get Your <span class="jio-text">Jio SIM</span></h2>
+            <div class="sim-grid">
+                <div class="sim-card">
+                    <i class="fas fa-sim-card"></i>
+                    <h3>New Connection</h3>
+                    <p>Get a new Jio SIM delivered to your doorstep</p>
+                    <button class="btn-secondary">Order Now</button>
+                </div>
+                <div class="sim-card">
+                    <i class="fas fa-exchange-alt"></i>
+                    <h3>Port to Jio</h3>
+                    <p>Keep your number and switch to Jio network</p>
+                    <button class="btn-secondary">Port Now</button>
+                </div>
+                <div class="sim-card">
+                    <i class="fas fa-globe"></i>
+                    <h3>eSIM</h3>
+                    <p>Activate eSIM instantly on your device</p>
+                    <button class="btn-secondary">Get eSIM</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Offers Section -->
+    <section class="offers-section" id="offers">
+        <div class="container">
+            <h2>Exclusive <span class="jio-text">Offers</span></h2>
+            <div class="offers-grid">
+                <div class="offer-card">
+                    <div class="offer-badge">Limited Time</div>
+                    <i class="fas fa-gift"></i>
+                    <h3>Welcome Offer</h3>
+                    <p>Get 2GB extra data on your first recharge</p>
+                    <button class="btn-primary">Claim Now</button>
+                </div>
+                <div class="offer-card">
+                    <i class="fas fa-ticket-alt"></i>
+                    <h3>Refer & Earn</h3>
+                    <p>Refer friends and earn ₹100 cashback</p>
+                    <button class="btn-primary">Refer Now</button>
+                </div>
+                <div class="offer-card">
+                    <i class="fas fa-star"></i>
+                    <h3>Netflix Bundled</h3>
+                    <p>Get Netflix free with annual plans</p>
+                    <button class="btn-primary">View Plans</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section" id="support">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>How do I recharge my Jio number?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>You can recharge your Jio number through MyJio app, website, or at any retail store. Simply
+                            enter your mobile number, choose a plan, and complete the payment.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>What is Jio 5G?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Jio 5G is India's fastest 5G network offering speeds up to 1 Gbps, low latency, and enhanced
+                            connectivity. It's available in 1000+ cities across India.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>How can I port my number to Jio?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>To port to Jio, send SMS PORT <10-digit mobile number> to 1900. You'll receive a UPC code.
+                                Visit a Jio store with the UPC code and required documents to complete the porting
+                                process.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>What payment methods are accepted?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We accept all major payment methods including Credit/Debit cards, Net Banking, UPI, Paytm,
+                            PhonePe, Google Pay, and digital wallets.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>How do I check my data balance?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Dial *333# or download the MyJio app to check your data balance, validity, and other account
+                            details instantly.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><span class="jio-text">Jio</span></h3>
+                    <p>India's fastest growing digital services company</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Products</h4>
+                    <ul>
+                        <li><a href="#">Prepaid</a></li>
+                        <li><a href="#">Postpaid</a></li>
+                        <li><a href="#">JioFiber</a></li>
+                        <li><a href="#">JioAirFiber</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Store Locator</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Download Apps</h4>
+                    <div class="app-links">
+                        <a href="#" class="app-btn">
+                            <i class="fab fa-google-play"></i>
+                            <div>
+                                <small>GET IT ON</small>
+                                <strong>Google Play</strong>
+                            </div>
+                        </a>
+                        <a href="#" class="app-btn">
+                            <i class="fab fa-apple"></i>
+                            <div>
+                                <small>Download on the</small>
+                                <strong>App Store</strong>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Jio Clone. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms &
+                        Conditions</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Login to MyJio</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <input type="tel" placeholder="Mobile Number" maxlength="10" required>
+                </div>
+                <button type="submit" class="btn-primary full-width">Send OTP</button>
+            </form>
+            <p class="modal-footer">Don't have an account? <a href="#" id="switchToSignup">Sign Up</a></p>
+        </div>
+    </div>
+
+    <!-- Signup Modal -->
+    <div class="modal" id="signupModal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Create Account</h2>
+            <form id="signupForm">
+                <div class="form-group">
+                    <input type="text" placeholder="Full Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="tel" placeholder="Mobile Number" maxlength="10" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="Email Address" required>
+                </div>
+                <button type="submit" class="btn-primary full-width">Sign Up</button>
+            </form>
+            <p class="modal-footer">Already have an account? <a href="#" id="switchToLogin">Login</a></p>
+        </div>
+    </div>
+
+    <!-- OTP Modal -->
+    <div class="modal" id="otpModal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Verify OTP</h2>
+            <p class="otp-info">Enter the 6-digit OTP sent to <span id="otpMobile"></span></p>
+            <form id="otpForm">
+                <div class="otp-inputs">
+                    <input type="text" maxlength="1" class="otp-input">
+                    <input type="text" maxlength="1" class="otp-input">
+                    <input type="text" maxlength="1" class="otp-input">
+                    <input type="text" maxlength="1" class="otp-input">
+                    <input type="text" maxlength="1" class="otp-input">
+                    <input type="text" maxlength="1" class="otp-input">
+                </div>
+                <button type="submit" class="btn-primary full-width">Verify OTP</button>
+                <button type="button" class="btn-secondary full-width" id="resendOTP">Resend OTP</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Payment Modal -->
+    <div class="modal" id="paymentModal">
+        <div class="modal-content payment-modal">
+            <span class="close">&times;</span>
+            <h2>Complete Payment</h2>
+            <div class="payment-details">
+                <div class="detail-row">
+                    <span>Mobile Number:</span>
+                    <strong id="paymentMobile"></strong>
+                </div>
+                <div class="detail-row">
+                    <span>Plan Amount:</span>
+                    <strong id="paymentAmount"></strong>
+                </div>
+            </div>
+            <h3>Select Payment Method</h3>
+            <div class="payment-methods">
+                <button class="payment-btn" data-method="razorpay">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/8/89/Razorpay_logo.svg" alt="Razorpay">
+                    <span>Razorpay</span>
+                </button>
+                <button class="payment-btn" data-method="paytm">
+                    <i class="fas fa-wallet"></i>
+                    <span>Paytm</span>
+                </button>
+                <button class="payment-btn" data-method="phonepe">
+                    <i class="fas fa-mobile-alt"></i>
+                    <span>PhonePe</span>
+                </button>
+                <button class="payment-btn" data-method="upi">
+                    <i class="fas fa-university"></i>
+                    <span>UPI</span>
+                </button>
+                <button class="payment-btn" data-method="card">
+                    <i class="fas fa-credit-card"></i>
+                    <span>Credit/Debit Card</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Dashboard (Hidden by default) -->
+    <div class="dashboard" id="dashboard" style="display: none;">
+        <div class="dashboard-sidebar">
+            <h3>My Account</h3>
+            <ul>
+                <li class="active" data-section="overview"><i class="fas fa-home"></i> Overview</li>
+                <li data-section="recharge-history"><i class="fas fa-history"></i> Recharge History</li>
+                <li data-section="saved-plans"><i class="fas fa-bookmark"></i> Saved Plans</li>
+                <li data-section="profile"><i class="fas fa-user"></i> Profile</li>
+                <li data-section="settings"><i class="fas fa-cog"></i> Settings</li>
+                <li id="logoutBtn"><i class="fas fa-sign-out-alt"></i> Logout</li>
+            </ul>
+        </div>
+        <div class="dashboard-content">
+            <div class="dashboard-section active" id="overview">
+                <h2>Welcome back, <span id="userName"></span>!</h2>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <i class="fas fa-phone"></i>
+                        <h3 id="userNumber"></h3>
+                        <p>Mobile Number</p>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-calendar"></i>
+                        <h3>28 Days</h3>
+                        <p>Validity Remaining</p>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-database"></i>
+                        <h3>15.5 GB</h3>
+                        <p>Data Remaining</p>
+                    </div>
+                </div>
+            </div>
+            <div class="dashboard-section" id="recharge-history">
+                <h2>Recharge History</h2>
+                <div class="history-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Plan</th>
+                                <th>Amount</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody id="historyTableBody">
+                            <!-- Will be populated by JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="dashboard-section" id="saved-plans">
+                <h2>Saved Plans</h2>
+                <div class="saved-plans-grid">
+                    <!-- Will be populated by JS -->
+                </div>
+            </div>
+            <div class="dashboard-section" id="profile">
+                <h2>Profile Settings</h2>
+                <form class="profile-form">
+                    <div class="form-group">
+                        <label>Full Name</label>
+                        <input type="text" id="profileName">
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" id="profileEmail">
+                    </div>
+                    <div class="form-group">
+                        <label>Mobile</label>
+                        <input type="tel" id="profileMobile" disabled>
+                    </div>
+                    <button type="submit" class="btn-primary">Update Profile</button>
+                </form>
+            </div>
+            <div class="dashboard-section" id="settings">
+                <h2>Settings</h2>
+                <div class="settings-options">
+                    <div class="setting-item">
+                        <div>
+                            <h4>Notifications</h4>
+                            <p>Receive updates about plans and offers</p>
+                        </div>
+                        <label class="switch">
+                            <input type="checkbox" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <div class="setting-item">
+                        <div>
+                            <h4>Auto-Recharge</h4>
+                            <p>Automatically recharge before expiry</p>
+                        </div>
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Live Chat Widget -->
+    <div class="chat-widget" id="chatWidget">
+        <div class="chat-header">
+            <h4><i class="fas fa-headset"></i> Live Support</h4>
+            <button class="chat-close" id="chatClose">&times;</button>
+        </div>
+        <div class="chat-messages" id="chatMessages">
+            <div class="chat-message bot">
+                <p>Hello! How can I help you today?</p>
+            </div>
+        </div>
+        <div class="chat-input">
+            <input type="text" placeholder="Type your message..." id="chatInput">
+            <button id="chatSend"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+    <button class="chat-button" id="chatButton">
+        <i class="fas fa-comments"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
